@@ -1,0 +1,251 @@
+{
+    "name": "Locale",
+    "label": "Locale",
+    "description": "Provides actions for localization operations.",
+    "group": "com.automationanywhere",
+    "artifactName": "Locale",
+    "packageVersion": "1.0.5-20200902-141153",
+    "codeVersion": "1.0.5-20200902-141153",
+    "commands": [
+        {
+            "name": "changedate",
+            "label": "Changes Date String Format",
+            "description": "Changes the Date Format of String",
+            "nodeLabel": "Changes Date String Format",
+            "mainClass": "com.automationanywhere.botcommand.sk.ConvertDateCommand",
+            "icon": "pgk.svg",
+            "backgroundColor": "#86c2ff",
+            "comment": true,
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "New Date String",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "datestring",
+                    "label": "Date String",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "sourceformat",
+                    "label": " Source Format",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "sourcelocale",
+                    "label": " Source Locale",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "en",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "targetformat",
+                    "label": " Target Format",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "targetlocale",
+                    "label": " Target Locale",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "en",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "datetostring",
+            "label": "Converts Date to String ",
+            "description": "Converts a Date to a String",
+            "nodeLabel": "Converts Date to String",
+            "mainClass": "com.automationanywhere.botcommand.sk.DatetoStringCommand",
+            "icon": "pgk.svg",
+            "backgroundColor": "#86c2ff",
+            "comment": true,
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Date String",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "datevalue",
+                    "label": "Date ",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "format",
+                    "label": "Target Format",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "formatlocale",
+                    "label": "Locale",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "en",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "stringtonumber",
+            "label": "Converts String to Number ",
+            "description": "Convert a String to a Number",
+            "nodeLabel": "Converts String to Number",
+            "mainClass": "com.automationanywhere.botcommand.sk.FormatNumberCommand",
+            "icon": "pgk.svg",
+            "backgroundColor": "#86c2ff",
+            "comment": true,
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Number Value",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "numberstring",
+                    "label": "Number String",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "formatlocale",
+                    "label": "Locale",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "en",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "valuetype",
+            "label": "Get Type of Value",
+            "description": "Get Type of Value",
+            "nodeLabel": "Get Type of Value",
+            "mainClass": "com.automationanywhere.botcommand.sk.GetValueTypeCommand",
+            "icon": "pgk.svg",
+            "backgroundColor": "#86c2ff",
+            "comment": true,
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Type",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "variable",
+                    "label": "Variable",
+                    "type": "VARIABLE",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "stringtodate",
+            "label": "Converts String to Date ",
+            "description": "Converts a String to a Date",
+            "nodeLabel": "Converts String to Date",
+            "mainClass": "com.automationanywhere.botcommand.sk.StringtoDateCommand",
+            "icon": "pgk.svg",
+            "backgroundColor": "#86c2ff",
+            "comment": true,
+            "returnType": "DATETIME",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Date",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "datestring",
+                    "label": "Date String",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "format",
+                    "label": "Source Format",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "formatlocale",
+                    "label": "Locale",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "en",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
